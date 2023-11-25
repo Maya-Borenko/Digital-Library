@@ -509,8 +509,6 @@ footer .contacts .sec p{
     header{
         border-radius: 5px 5px 0 0;
         z-index:200;
-        position:sticky;
-        top:20px;
     }
     .filter{
         padding:0 0 15px 0;
@@ -529,8 +527,6 @@ footer .contacts .sec p{
     }
     .hrefs{
         z-index:200;
-        position:sticky;
-        top:70px;
         font-size: 16px;
         border-radius: 0;
         margin:0;
