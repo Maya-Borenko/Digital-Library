@@ -267,7 +267,7 @@ footer .contacts{
     width:80%;
     padding:20px 100px;
     display: grid;
-    grid-template-columns: 40% 30% 30%;
+    grid-template-columns: 70% 30%;
     grid-gap:20px;
     
 }
@@ -342,7 +342,7 @@ footer .contacts .sec p{
     color:rgb(83, 54, 54);
 }
 
-.analogue{
+/* .analogue{
     position: relative;
 }
 
@@ -359,7 +359,7 @@ footer .contacts .sec p{
 
 .analogue li a:hover{
     color:rgb(83, 54, 54);
-}
+} */
 
 .info{
     position: relative;
