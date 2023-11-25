@@ -49,7 +49,7 @@ function send() {
 		const cartWrapper = document.querySelector('.cards');
 		cartWrapper.insertAdjacentHTML('beforeend',bookItemHTML)
 	}
-	if (!Array.isArray(likeBooks) || likeBooks.lengh == 0){
+	if (typeof likeBooks == "undefined" || likeBooks.lengh == 0){
 		const noneItemHTML = `
 		<div class="new">
          		<h2>У вас еще нет понравившихся!</h2>
