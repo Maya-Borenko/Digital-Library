@@ -49,6 +49,14 @@ function send() {
 		const cartWrapper = document.querySelector('.cards');
 		cartWrapper.insertAdjacentHTML('beforeend',bookItemHTML)
 	}
+	if (likeBooks.lengh == 0){
+		const noneItemHTML = `
+		<div class="new">
+         		<h2>У вас еще нет понравившихся!</h2>
+      		</div>`
+		const addWrapper = document.querySelector('.cards');
+		addWrapper.insertAdjacentHTML('beforeend',noneItemHTML)
+	}
 };
 	
 
