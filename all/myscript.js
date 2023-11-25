@@ -32,6 +32,7 @@ function deleteItem(item, favorId){
 function send() {
 // Загрузка состояния выделения из localStorage при загрузке страницы
 	var likeBooks =  JSON.parse(localStorage.getItem('likeBooks'));
+	var notExist = true;
 	for (var i=0; i<likeBooks.length;i++){
 		var item = likeBooks[i];
 		const bookItemHTML = `
@@ -48,8 +49,9 @@ function send() {
 		</div>`
 		const cartWrapper = document.querySelector('.cards');
 		cartWrapper.insertAdjacentHTML('beforeend',bookItemHTML)
+		notExist = false;
 	}
-	if (typeof likeBooks == "undefined" || likeBooks.lengh == 0){
+	if (notExist){
 		const noneItemHTML = `
 		<div class="new">
          		<h2>У вас еще нет понравившихся!</h2>
