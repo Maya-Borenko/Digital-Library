@@ -78,7 +78,29 @@ main{
     flex-direction: column;
 }
 
+.new{
+    box-shadow: 10px 15px 15px #5c4b46;
+    border-radius: 50px;
+    width:80%;
+    height:auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background: #7f6c66;
+    margin: 2% 10%;
+    padding:50px;
+}
 
+.new p{
+    align-self: center;
+    margin:0;
+    padding:0;
+    display: flex;
+    line-height: 20px;
+    flex-wrap: wrap;
+    font-family: 'Noto Serif', serif;
+}
 
 main p{
     flex-wrap: wrap;
