@@ -490,7 +490,7 @@ footer .contacts .sec p{
         margin: 0 5%;
     }
     .gradient{
-        padding-bottom:15%;
+        padding-bottom:5%;
     }
     footer .contacts{
         grid-template-columns: repeat(1,100%);
