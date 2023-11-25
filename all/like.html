@@ -1,0 +1,101 @@
+<!DOCTYPE html><!--Тип документа для браузера-->
+<html lang="ru"><!--Самый главный тег-->
+<head><!--Вся техническая информация-->
+   <meta charset="UTF-8" ><!--Кодировка страницы-->
+   <meta http-equiv="X-UA-Compaitible" content="IE=edge"><!--Для совместимости с IE-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Для красивого отображения на мобильных устройствах-->
+   <title>Электронная библиотека</title><!--Заголовок страницы-->
+   <link rel="stylesheet" href="like.css"> <!--Подключение css-->
+   <link rel="icon" type="image/jpg" href="pngwing.com.png"/> <!--Фавикон-->
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif:wght@500&family=Pacifico&family=Roboto+Condensed&display=swap');
+   </style>
+   <script src="https://kit.fontawesome.com/bcd0c2360b.js" crossorigin="anonymous"></script>
+</head>
+<body onload="send()"><!--Тело веб-страницы-->
+   <div class="logo">
+      <img class="logo" src="pngwing.com.png">
+      <h1>Электронная библиотека</h1>
+      <img class="logo" src="pngwing.com.png">
+   </div>
+   <header><!--Шапка-->
+      <nav><!--Навигация-->
+         <input type="text" placeholder="Search">
+         <input id="start" class="button_for_search" type="submit" onclick="javascript: FindOnPage('text-to-find',true); return false;" value="->">
+         <input id="clear" class="button_for_search" type="submit" onclick="javascript: FindOnPage('text-to-find',false); return false;" value="X">
+      </nav>
+   </header>
+   <section class="hrefs">
+      <a class="first" href="file:///C:/Users/Maya/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%B0%D1%87%203%20%D1%81%D0%B5%D0%BC/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0/index.html">Новости</a>
+      <a href="file:///C:/Users/Maya/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%B0%D1%87%203%20%D1%81%D0%B5%D0%BC/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0/all/all.html">Все книги</a>
+      <a href="file:///C:/Users/Maya/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%B0%D1%87%203%20%D1%81%D0%B5%D0%BC/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0/all/top.html">Топ этого месяца</a>
+      <a href="#">Понравившиеся</a>
+      <a class="last" href="file:///C:/Users/Maya/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%B0%D1%87%203%20%D1%81%D0%B5%D0%BC/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0/akk/index.html">Аккаунт</a>
+   </section>
+   <main>
+    <div class="cards" name="cards">
+        
+    </div>
+   </main>
+
+   <footer><!--Низ сайта-->
+      <div class="contacts">
+         <div class="sec about">
+            <h2>О нас</h2>
+            <p>Эта электронная библиотека была создана для книголюбов.
+                Призвание этого сайта помогать путешественникам экономить силы, оставляя тяжелые бумажные издания дома.</p>
+            <ul class="icons">
+               <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>   
+               <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
+               <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+         </div>
+         <!-- <div class="sec links">
+            <h2>Быстрая навигация</h2>
+            <ul>
+               <li><a href="#">Поиск</a></li>   
+               <li><a href="#">В разработке...</a></li>
+               <li><a href="#">В разработке...</a></li>
+               <li><a href="#">В разработке...</a></li>
+               <li><a href="#">В разработке...</a></li>
+            </ul>
+         </div> -->
+         <div class="sec analogue">
+            <h2>Аналоги</h2>
+            <ul>
+               <li><a href="https://www.elibrary.ru/defaultx.asp">Elibrary</a></li>   
+               <li><a href="https://rusneb.ru/">НЭБ</a></li>
+               <li><a href="https://mybook.ru/">MyBook</a></li>
+               <li><a href="https://www.shpl.ru/readers/helpful_links/free_ebooks/">Публичная историческая библиотека</a></li>
+            </ul>
+         </div>
+         <div class="sec contact">
+            <h2>Связь с нами</h2>
+            <ul class="info">
+               <li>
+                  <span><i class="fa-solid fa-map-location-dot"></i></span>
+                  <span>Москва, Пр-т Вернадского, д. 78</span>
+               </li>
+               <li>
+                  <span><i class="fa-solid fa-phone"></i></span>
+                  <p>
+                     <a href="tel:+75644326534">+7 564 432-65-34</a><br \>
+                     <a href="tel:+77563429456">+7 756 342-94-56</a>
+                  </p>
+               </li>
+               <li>
+                  <span><i class="fa-solid fa-envelope"></i></span>
+                  <p>
+                     <a href="mailto:biblio@mail.ru">biblio@mail.ru</a>
+                  </p>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </footer>
+   <div class="copyright">
+      <p>Copyright © 2023 Digital Library. All Rights Reserved.</p>
+   </div>
+   <script src="myscript.js"></script> <!--Подключение js-->
+</body>
+</html>

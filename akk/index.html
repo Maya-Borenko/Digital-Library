@@ -1,0 +1,137 @@
+<!DOCTYPE html><!--Тип документа для браузера-->
+<html lang="ru"><!--Самый главный тег-->
+<head><!--Вся техническая информация-->
+   <meta charset="UTF-8" ><!--Кодировка страницы-->
+   <meta http-equiv="X-UA-Compaitible" content="IE=edge"><!--Для совместимости с IE-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Для красивого отображения на мобильных устройствах-->
+   <title>Электронная библиотека</title><!--Заголовок страницы-->
+   <link rel="stylesheet" href="style.css"> <!--Подключение css-->
+   <link rel="icon" type="image/jpg" href="pngwing.com.png"/> <!--Фавикон-->
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif:wght@500&family=Pacifico&family=Roboto+Condensed&display=swap');
+   </style>
+   <script src="https://kit.fontawesome.com/bcd0c2360b.js" crossorigin="anonymous"></script>
+</head>
+<body><!--Тело веб-страницы-->
+   <div class="logo">
+      <img class="logo" src="pngwing.com.png">
+      <h1>Электронная библиотека</h1>
+      <img class="logo" src="pngwing.com.png">
+   </div>
+   <header><!--Шапка-->
+      <nav><!--Навигация-->
+         <input class="place_for_search" type="text" id="text-to-find" placeholder="Search">
+         <input id="start" class="button_for_search" type="submit" onclick="javascript: FindOnPage('text-to-find',true); return false;" value="->">
+         <input id="clear" class="button_for_search" type="submit" onclick="javascript: FindOnPage('text-to-find',false); return false;" value="X">
+      </nav>
+      <script src="myscript.js"></script> <!--Подключение js-->
+   </header>
+   <section class="hrefs">
+      <a class="first" href="file:///C:/Users/Maya/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%B0%D1%87%203%20%D1%81%D0%B5%D0%BC/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0/index.html">Новости</a>
+      <a href="file:///C:/Users/Maya/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%B0%D1%87%203%20%D1%81%D0%B5%D0%BC/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0/all/all.html">Все книги</a>
+      <a href="file:///C:/Users/Maya/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%B0%D1%87%203%20%D1%81%D0%B5%D0%BC/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0/all/top.html">Топ этого месяца</a>
+      <a href="file:///C:/Users/Maya/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%B0%D1%87%203%20%D1%81%D0%B5%D0%BC/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0/all/like.html">Понравившиеся</a>
+      <a href="#">Аккаунт</a>
+   </section>
+   <main>
+      <div class="pole">
+         <!-- <div class="square"style="--i:0;"></div>
+         <div class="square"style="--i:1;"></div>
+         <div class="square"style="--i:2;"></div>
+         <div class="square"style="--i:3;"></div>
+         <div class="square"style="--i:4;"></div> -->
+         <section class="enter">
+         <div class="form">
+            <h3>Войдите в вашу личную библиотеку</h3>
+            <form>
+               <div class="inputBox">
+                  <input type="text" placeholder="Name">
+                </div>
+               <div class="inputBox">
+                  <input type="password" placeholder="Password">
+               </div>
+               <div class="inputBox">
+                  <input type="submit" value="Войти">
+               </div>
+            </form>
+         </div>
+         </section>
+         <section class="reg">
+            <div class="form">
+               <h3>Создайте вашу личную библиотеку</h3>
+               <form>
+                  <div class="inputBox">
+                     <input type="text" placeholder="Name">
+                   </div>
+                  <div class="inputBox">
+                     <input type="password" placeholder="Password">
+                  </div>
+                  <div class="inputBox">
+                     <input type="submit" value="Создать">
+                  </div>
+               </form>
+            </div>
+            </section>
+      </div>
+   </main>
+
+   <footer><!--Низ сайта-->
+      <div class="contacts">
+         <div class="sec about">
+            <h2>О нас</h2>
+            <p>Эта электронная библиотека была создана для книголюбов.
+                Призвание этого сайта помогать путешественникам экономить силы, оставляя тяжелые бумажные издания дома.</p>
+            <ul class="icons">
+               <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>   
+               <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
+               <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+         </div>
+         <!-- <div class="sec links">
+            <h2>Быстрая навигация</h2>
+            <ul>
+               <li><a href="#">Поиск</a></li>   
+               <li><a href="#">В разработке...</a></li>
+               <li><a href="#">В разработке...</a></li>
+               <li><a href="#">В разработке...</a></li>
+               <li><a href="#">В разработке...</a></li>
+            </ul>
+         </div> -->
+         <div class="sec analogue">
+            <h2>Аналоги</h2>
+            <ul>
+               <li><a href="https://www.elibrary.ru/defaultx.asp">Elibrary</a></li>   
+               <li><a href="https://rusneb.ru/">НЭБ</a></li>
+               <li><a href="https://mybook.ru/">MyBook</a></li>
+               <li><a href="https://www.shpl.ru/readers/helpful_links/free_ebooks/">Публичная историческая библиотека</a></li>
+            </ul>
+         </div>
+         <div class="sec contact">
+            <h2>Связь с нами</h2>
+            <ul class="info">
+               <li>
+                  <span><i class="fa-solid fa-map-location-dot"></i></span>
+                  <span>Москва, Пр-т Вернадского, д. 78</span>
+               </li>
+               <li>
+                  <span><i class="fa-solid fa-phone"></i></span>
+                  <p>
+                     <a href="tel:+75644326534">+7 564 432-65-34</a><br \>
+                     <a href="tel:+77563429456">+7 756 342-94-56</a>
+                  </p>
+               </li>
+               <li>
+                  <span><i class="fa-solid fa-envelope"></i></span>
+                  <p>
+                     <a href="mailto:biblio@mail.ru">biblio@mail.ru</a>
+                  </p>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </footer>
+   <div class="copyright">
+      <p>Copyright © 2023 Digital Library. All Rights Reserved.</p>
+   </div>
+</body>
+</html>

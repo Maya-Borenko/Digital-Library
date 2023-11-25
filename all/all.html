@@ -1,0 +1,241 @@
+<!DOCTYPE html><!--Тип документа для браузера-->
+<html lang="ru"><!--Самый главный тег-->
+<head><!--Вся техническая информация-->
+   <meta charset="UTF-8" ><!--Кодировка страницы-->
+   <meta http-equiv="X-UA-Compaitible" content="IE=edge"><!--Для совместимости с IE-->
+   <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Для красивого отображения на мобильных устройствах-->
+   <title>Электронная библиотека</title><!--Заголовок страницы-->
+   <link rel="stylesheet" href="all.css"> <!--Подключение css-->
+   <link rel="icon" type="image/jpg" href="pngwing.com.png"/> <!--Фавикон-->
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Serif:wght@500&family=Pacifico&family=Roboto+Condensed&display=swap');
+   </style>
+   <script src="https://kit.fontawesome.com/bcd0c2360b.js" crossorigin="anonymous"></script>
+</head>
+<body><!--Тело веб-страницы-->
+   <div class="logo">
+      <img class="logo" src="pngwing.com.png">
+      <h1>Электронная библиотека</h1>
+      <img class="logo" src="pngwing.com.png">
+   </div>
+   <header><!--Шапка-->
+      <nav><!--Навигация-->
+         <input class="place_for_search" type="text" id="text-to-find" placeholder="Search">
+         <input class="button_for_search" type="submit" onclick="javascript: FindOnPage('text-to-find',true); return false;" value="->">
+         <input class="button_for_search" type="submit" onclick="javascript: FindOnPage('text-to-find',false); return false;" value="X">
+      </nav>
+   </header>
+   <section class="hrefs">
+      <a class="first" href="file:///C:/Users/Maya/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%B0%D1%87%203%20%D1%81%D0%B5%D0%BC/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0/index.html">Новости</a>
+      <a href="#">Все книги</a>
+      <a href="file:///C:/Users/Maya/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%B0%D1%87%203%20%D1%81%D0%B5%D0%BC/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0/all/top.html">Топ этого месяца</a>
+      <a href="file:///C:/Users/Maya/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%B0%D1%87%203%20%D1%81%D0%B5%D0%BC/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0/all/like.html">Понравившиеся</a>
+      <a class="last" href="file:///C:/Users/Maya/Desktop/%D0%9A%D1%83%D1%80%D1%81%D0%B0%D1%87%203%20%D1%81%D0%B5%D0%BC/%D0%AD%D0%BB%D0%B5%D0%BA%D1%82%D1%80%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F%20%D0%B1%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D1%82%D0%B5%D0%BA%D0%B0/akk/index.html">Аккаунт</a>
+      <div class="filter">
+         <i class="genres">Критерии поиска</i>
+         <div class="chose">
+            <div onclick="finden('fantasy')" class="box-1">
+               <div class="btn btn-one">
+                 <span>Фэнтези</span>
+               </div>
+             </div> 
+             <div onclick="finden('classic')" class="box-1">
+               <div class="btn btn-one">
+                 <span>Классика</span>
+               </div>
+             </div> 
+             <div onclick="finden('detective')" class="box-1">
+               <div class="btn btn-one">
+                 <span>Детектив</span>
+               </div>
+             </div> 
+             <div onclick="finden('roman')" class="box-1">
+               <div class="btn btn-one">
+                 <span>Романтика</span>
+               </div>
+             </div> 
+             <div onclick="finden('horror')" class="box-1">
+               <div class="btn btn-one">
+                 <span>Ужасы</span>
+               </div>
+             </div> 
+            <script src="myscript.js"></script> <!--Подключение js-->
+         </div>
+      </div>
+   </section>
+   <main>
+      <div class="cards" name="cards">
+         <a name="book7" href="#book7" id="fantasy" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor7" onclick="full('favor7')" style="color: #ffffff;"></i>
+            <img src="card0.jpg">
+            <p>"Мара и Морок" Лия Арден... Читать</p>
+         </a>
+         <a name="book8" href="#book8" id="detective" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor8" onclick="full('favor8')" style="color: #ffffff;"></i>
+            <img src="card7.jpg">
+            <p>"Хип-хоп маленьких лебедей" Дарья Донцова... Читать</p>
+         </a>
+         <a name="book9" href="#book9" id="detective" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor9" onclick="full('favor9')" style="color: #ffffff;"></i>
+            <img src="card8.jpg">
+            <p>"Жил-был раз, жил-был два" Франк Тилье... Читать</p>
+         </a>
+         <a name="book11" href="#book11" id="fantasy" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor11" onclick="full('favor11')" style="color: #ffffff;"></i>
+            <img src="card10.jpg">
+            <p>"Локон с изумрудного моря" Брендон Сандерсон... Читать</p>
+         </a>
+         <a name="book1" href="#book1" id="fantasy" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor1" onclick="full('favor1')" style="color: #ffffff;"></i>
+            <img src="card1.jpg">
+            <p>"Когда заканчиваются сказки" Елена Кондрацкая... Читать</p>
+         </a>
+         <a name="book10" href="#book10" id="fantasy" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor10" onclick="full('favor10')" style="color: #ffffff;"></i>
+            <img src="card9.jpg">
+            <p>"Штормовой ворон" Калин Джозефсон... Читать</p>
+         </a>
+         <a name="book12" href="#book12" id="fantasy" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor12" onclick="full('favor12')" style="color: #ffffff;"></i>
+            <img src="card11.jpg">
+            <p>"Игра престолов" Джордж Р. Р. Мартин... Читать</p>
+         </a>
+         <a name="book13" href="#book13" id="fantasy" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor13" onclick="full('favor13')" style="color: #ffffff;"></i>
+            <img src="card12.jpg">
+            <p>"Полтора дракона для травницы или таверна 'С любовью'"... Читать</p>
+         </a>
+         <a name="book2" href="#book2" id="fantasy" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor2" onclick="full('favor2')" style="color: #ffffff;"></i>
+            <img src="card2.jpg">
+            <p>"Двойник Запада" Лия Арден... Читать</p>
+         </a>
+         <a name="book14" href="#book14" id="fantasy" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor14" onclick="full('favor14')" style="color: #ffffff;"></i>
+            <img src="card13.jpg">
+            <p>"Драконья Гавань" Робин Хобб... Читать</p>
+         </a>
+         <a name="book15" href="#book15" id="detective" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor15" onclick="full('favor15')" style="color: #ffffff;"></i>
+            <img src="card14.jpg">
+            <p>"Клуб самоубийц" Роберт Льюис Стивенсон... Читать</p>
+         </a>
+         <a name="book3" href="#book3" id="roman" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor3" onclick="full('favor3')" style="color: #ffffff;"></i>
+            <img src="card3.jpg">
+            <p>"Шах и мат" Али Хейзелвуд... Читать</p>
+         </a>
+         <a name="book16" href="#book16" id="classic" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor16" onclick="full('favor16')" style="color: #ffffff;"></i>
+            <img src="card15.jpg">
+            <p>"1984", "Скотный двор" Дж. Оруэлл... Читать</p>
+         </a>
+         <a name="book4" href="#book4" id="fantasy" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor4" onclick="full('favor4')" style="color: #ffffff;"></i>
+            <img src="card4.jpg">
+            <p>"Избушка на костях" Ксения Власова... Читать</p>
+         </a>
+         <a name="book17" href="#book17" id="classic" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor17" onclick="full('favor17')" style="color: #ffffff;"></i>
+            <img src="card16.jpg">
+            <p>"Портрет Дориана Грея" Оскар Уайльд... Читать</p>
+         </a>
+         <a name="book19" href="#book19" id="roman" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor19" onclick="full('favor19')" style="color: #ffffff;"></i>
+            <img src="card18.jpg">
+            <p>"Гордость и предубеждение" Джейн Остин... Читать</p>
+         </a>
+         <a name="book20" href="#book20" id="classic" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor20" onclick="full('favor20')" style="color: #ffffff;"></i>
+            <img src="card19.jpg">
+            <p>"Маленькие женщины" Луиза Мэй Олкотт... Читать</p>
+         </a>
+         <a name="book5" href="#book5" id="roman" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor5" onclick="full('favor5')" style="color: #ffffff;"></i>
+            <img src="card5.jpg">
+            <p>"Звезды над нами" Марисса Мейер... Читать</p>
+         </a>
+         <a name="book18" href="#book18" id="classic" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor18" onclick="full('favor18')" style="color: #ffffff;"></i>
+            <img src="card17.jpg">
+            <p>"Сто лет одиночества" Габриэль Гарсиа Маркес... Читать</p>
+         </a>
+         <a name="book6" href="#book6" id="fantasy" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor6" onclick="full('favor6')" style="color: #ffffff;"></i>
+            <img src="card6.jpg">
+            <p>"Заклинатели драконов" Элисон Гудман... Читать дальше</p>
+         </a>
+         <a name="book21" href="#book21" id="classic" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor21" onclick="full('favor21')" style="color: #ffffff;"></i>
+            <img src="card20.jpg">
+            <p>"Хорошие жены" Луиза Мэй Олкотт... Читать</p>
+         </a>
+         <a name="book22" href="#book22" id="horror" class="gradient">
+            <i class="fa-sharp fa-solid fa-heart" id="favor7" onclick="full('favor7')" style="color: #ffffff;"></i>
+            <img src="card21.jpg">
+            <p>"Оно" Стивен Кинг... Читать</p>
+         </a>
+      </div>
+   </main>
+
+   <footer><!--Низ сайта-->
+      <div class="contacts">
+         <div class="sec about">
+            <h2>О нас</h2>
+            <p>Эта электронная библиотека была создана для книголюбов.
+                Призвание этого сайта помогать путешественникам экономить силы, оставляя тяжелые бумажные издания дома.</p>
+            <ul class="icons">
+               <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>   
+               <li><a href="#"><i class="fa-brands fa-vk"></i></a></li>
+               <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            </ul>
+         </div>
+         <!-- <div class="sec links">
+            <h2>Быстрая навигация</h2>
+            <ul>
+               <li><a href="#">Поиск</a></li>   
+               <li><a href="#">В разработке...</a></li>
+               <li><a href="#">В разработке...</a></li>
+               <li><a href="#">В разработке...</a></li>
+               <li><a href="#">В разработке...</a></li>
+            </ul>
+         </div> -->
+         <div class="sec analogue">
+            <h2>Аналоги</h2>
+            <ul>
+               <li><a href="https://www.elibrary.ru/defaultx.asp">Elibrary</a></li>   
+               <li><a href="https://rusneb.ru/">НЭБ</a></li>
+               <li><a href="https://mybook.ru/">MyBook</a></li>
+               <li><a href="https://www.shpl.ru/readers/helpful_links/free_ebooks/">Публичная историческая библиотека</a></li>
+            </ul>
+         </div>
+         <div class="sec contact">
+            <h2>Связь с нами</h2>
+            <ul class="info">
+               <li>
+                  <span><i class="fa-solid fa-map-location-dot"></i></span>
+                  <span>Москва, Пр-т Вернадского, д. 78</span>
+               </li>
+               <li>
+                  <span><i class="fa-solid fa-phone"></i></span>
+                  <p>
+                     <a href="tel:+75644326534">+7 564 432-65-34</a><br \>
+                     <a href="tel:+77563429456">+7 756 342-94-56</a>
+                  </p>
+               </li>
+               <li>
+                  <span><i class="fa-solid fa-envelope"></i></span>
+                  <p>
+                     <a href="mailto:biblio@mail.ru">biblio@mail.ru</a>
+                  </p>
+               </li>
+            </ul>
+         </div>
+      </div>
+   </footer>
+   <div class="copyright">
+      <p>Copyright © 2023 Digital Library. All Rights Reserved.</p>
+   </div>
+   <script src="myscript.js"></script> <!--Подключение js-->
+</body>
+</html>
