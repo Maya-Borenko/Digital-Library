@@ -16,8 +16,8 @@ function finden(genre){
 	findNow = true;
 }
 
-var like = [];
-var favors = document.querySelectorAll(".fa-heart");
+
+
 
 function deleteItem(item, favorId){
 	var bookItem = document.querySelector(item);
@@ -62,6 +62,7 @@ function send() {
 };
 	
 
+var like = [];
 function changeItem(favorId, bookHref, bookImage, bookText, add){
 	if (localStorage.getItem('likeBooks')){
 		like = JSON.parse(localStorage.getItem('likeBooks'));
@@ -91,6 +92,7 @@ function changeItem(favorId, bookHref, bookImage, bookText, add){
 	localStorage.setItem('likeBooks', JSON.stringify(like));
 }
 
+var favors = document.querySelectorAll(".fa-heart");
 favors.forEach(function(favor) {
 	if (localStorage.getItem(favor.id) == '900'){
 		favor.style.fontWeight = '900';
