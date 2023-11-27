@@ -96,7 +96,6 @@ main{
     align-self: center;
     margin:0;
     padding:0;
-    display: flex;
     line-height: 20px;
     flex-wrap: wrap;
     font-family: 'Noto Serif', serif;
